@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>⚡ Olympian Helpers</title>
+        <style>
+            body {
+                font-family:"comic sans MS", sans-serif;
+            }
+            
+            .importiant {
+                font-weight:bold;
+            }
+            
+            .popup {
+                text-decoration:underline;
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Olympian Helpers</h1>
+    <h2>Main Idea</h2>
+    <p><strong>Olympian Helpers</strong> is a book series written by Oz Lavenski. In the story, the two main characters, Nicholas Brown and his half-brother, Francis Gorsky,  do work for the <span id="popup1" class="importiant popup">Olympian</span> gods. This includes anything from finding a treasure to stopping a war.</p>
+    <h2>Characters</h2>
+    <p><strong>Nick Brown and Francis Gorsky</strong> are the main characters (or MCs) in the story. They are the two <span class="importiant popup" id="popup2">protagonists</span> in the story. Nick is the younger kid, but he's smarter, quicker on his feet, and also the main main character. The story is writen in his <span class="importiant popup" id="popup3">POV</span>.</p>
+    <h2>Books</h2>
+    <p><strong>There are 2 books</strong> in the series right now. A third one is in the making. Each one follows a similar <span class="importiant popup" id="popup4">plot</span>, where the kids are having their normal life, one of the gods shows up, reports something that happened, and then tells them to fix it.</p>
+    <h2>Author</h2>
+    <p><strong>Oz Lavenski</strong>, as you can guess, loves Greek Mythology. He's read every book he could get his hands on (for kids, of course). He was inspired the most by <span class="importiant">George O Connor</span>. That's where he got the myth about <span class="importiant">Hermes and the dogs</span> and <span class="importiant">Apollo and Asclepius</span>.</p>
+    <script>
+        popEl1 = document.getElementById("popup1")
+        popEl2 = document.getElementById("popup2")
+        popEl3 = document.getElementById("popup3")
+        popEl4 = document.getElementById("popup4")
+        mouseOver = function(el, txt1, txt2){
+            var name = document.getElementById(el)
+            name.textContent = txt1
+            window.setTimeout(function(){
+                reset(el, txt2)
+            }, 5000)
+        }
+        reset = function(el, txt){
+            var name = document.getElementById(el)
+            name.textContent = txt
+        }
+        popEl1.addEventListener("mousemove", function(){
+            mouseOver("popup1", "Greek", "Olympian")
+        })
+        popEl2.addEventListener("mousemove", function(){
+            mouseOver("popup2", "good guys", "protagonists")
+        })
+        popEl3.addEventListener("mousemove", function(){
+            mouseOver("popup3", "Point Of Veiw", "POV")
+        })
+        popEl4.addEventListener("mousemove", function(){
+            mouseOver("popup4", "story structure", "plot")
+        })
+    </script>
+    </body>
+</html>
